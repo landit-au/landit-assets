@@ -1,66 +1,57 @@
 # landit-assets
 
-This repository stores static media assets used across email signatures and other places where the asset file name and path must remain stable.
+Static asset host for the LANDIT platform — email-signature images, logo files, and (planned) a static version of the brand guidelines. Served publicly at **https://asset.landit.com.au/**.
 
 ## Purpose
 
-- Host static assets such as signature images.
-- Preserve file names and paths so external references do not break.
-- Keep asset management simple and predictable.
+- Host static assets whose public URL must stay stable forever (a sent email signature can never be updated).
+- Keep asset management simple: files in the repo map 1:1 to public URLs.
+
+## Deployment
+
+GitHub Pages serves the `main` branch root directly — no build step. Merging to `main` redeploys automatically, usually within a minute.
+
+- `CNAME` pins the `asset.landit.com.au` custom domain.
+- `.nojekyll` keeps Pages serving files verbatim (no Jekyll processing, so dotfiles and `_`-prefixed paths deploy).
+- `index.html` is a landing page that redirects to https://landit.com.au/ — not an asset index.
+- `robots.txt` keeps HTML pages unindexed while allowing image files to be crawled.
 
 ## Repository structure
 
-- `email/` – email-specific assets
+- `email/` — email-signature HTML templates + images (`email/realtisan/` for Realtisan-brand signatures)
 
 Example:
 
-- `email/jack.png`
+- `email/jack.png` → `https://asset.landit.com.au/email/jack.png`
 
 ## Usage
 
-Use the exact path and filename when embedding assets.
-
-Example HTML for an email signature:
+Reference assets by absolute URL — the repo path becomes the URL path:
 
 ```html
-<img src="https://your-cdn.example.com/email/jack.png" alt="Jack" />
-```
-
-If the asset is referenced from a local copy or in documentation, keep the same path:
-
-```text
-email/jack.png
+<img src="https://asset.landit.com.au/email/jack.png" alt="Jack" />
 ```
 
 ## File naming and path rules
 
-- Do not rename or move files unless you also update every reference.
-- Keep names lowercase and avoid spaces when possible.
-- Preserve the directory structure.
-- If you add a new asset, place it in the correct folder and use a clear, stable filename.
+- **Never rename, move, or delete a published asset** — its URL is embedded in places that can't be updated (sent emails, third-party sites).
+- Keep names lowercase and hyphenated, no spaces — the filename becomes a permanent public URL.
+- New asset categories get their own top-level folder (e.g. `brand/`); new brands inside a category get a subfolder.
+- If you add an asset, place it in the correct folder and use a clear, stable filename.
 
 ## Adding or updating assets
 
-1. Add the file under the appropriate folder (for example, `email/`).
-2. Keep the filename stable and descriptive.
-3. Update any references wherever the asset is used.
-4. Commit the change with a clear message, such as:
+Work happens on a branch, merged via PR (see `AGENTS.md` for the conventions agents follow):
 
 ```bash
+git checkout -b chore-add-email-signature
 git add email/new-image.png
-git commit -m "Add email signature asset email/new-image.png"
+git commit -m "chore: Add email signature asset email/new-image.png"
 ```
 
-## GitHub Pages
-
-This repository is published as a GitHub Pages site. The site uses `index.html` to describe the repository and redirect visitors to `https://landit.com.au/`.
-
-- `index.html` contains a short page explanation and a timed redirect.
-- `robots.txt` is configured to discourage indexing of the homepage while allowing access to asset subfolders like `email/`.
-- The asset URLs should still resolve normally from their static paths.
+After merging, verify the asset loads at `https://asset.landit.com.au/<path>` before referencing it.
 
 ## Notes
 
-- This repo is meant for static assets only, not source code.
-- Broken images typically mean the filename or path has changed.
-- Preserve file paths exactly to avoid rendering issues in email clients.
+- This repo is for static assets only, not source code, and is **public by design** — never commit secrets or unreleased material.
+- Broken images in email signatures almost always mean the filename or path changed.

@@ -10,6 +10,7 @@ Layout:
 
 - `generic/signature.html` / `generic/signature-elaine.html` — LANDIT-brand signatures, each pairing with a portrait at this folder's root (`jack.png`, `elaine.png`)
 - `realtisan/` — Realtisan-brand signatures (`jack.html`); one subfolder per brand
+- `signature.html` / `signature-elaine.html` at this folder's root — redirect stubs (meta-refresh → `generic/…`) preserving the pre-`generic/` URLs; not templates to copy
 
 Adding a signature:
 

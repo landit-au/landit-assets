@@ -2,11 +2,13 @@
 
 Read alongside the root `AGENTS.md`; the published-URL immutability rule applies hardest here — once a signature is sent, its image URL is frozen forever.
 
+**Live files — never rename, move, or delete:** `jack.png` and `elaine.png` at this folder's root are hard-coded into `generic/signature.html` and `generic/signature-elaine.html`, which are already pasted into third-party email systems. Every open of those emails fetches `https://asset.landit.com.au/email/jack.png` / `https://asset.landit.com.au/email/elaine.png` — those paths must keep serving.
+
 Signature HTML files are copy-paste templates rendered by recipients' mail clients: table layout, fully inline styles only — no external CSS, no `<link>`, no `<style>` reliance, no scripts. Every `img src` must be an absolute `https://asset.landit.com.au/...` URL.
 
 Layout:
 
-- `signature.html` / `signature-elaine.html` — LANDIT-brand signatures, each pairing with a same-named portrait (`jack.png`, `elaine.png`)
+- `generic/signature.html` / `generic/signature-elaine.html` — LANDIT-brand signatures, each pairing with a portrait at this folder's root (`jack.png`, `elaine.png`)
 - `realtisan/` — Realtisan-brand signatures (`jack.html`); one subfolder per brand
 
 Adding a signature:

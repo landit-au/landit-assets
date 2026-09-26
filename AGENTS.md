@@ -52,10 +52,10 @@ Several files index the others, so every add, rename or removal must update them
 
 Renames and removals of published paths are still forbidden (see above). When a new path supersedes an old one, keep the old file and point the indexes at the new one.
 
-Before opening the PR, check that every absolute URL in the indexes maps to a file in the repo (prints nothing when clean):
+Before opening the PR, check that every absolute URL in the indexes, pages and `fonts.css` maps to a file in the repo (prints nothing when clean). If you add a new index page or stylesheet, add it to this command:
 
 ```bash
-grep -ohE 'https://asset\.landit\.com\.au/[^]"'"'"'`)<> ]*' llms.txt index.html */AGENTS.md brand/*/AGENTS.md brand/*/index.html \
+grep -ohE 'https://asset\.landit\.com\.au/[^]"'"'"'`)<> ]*' llms.txt index.html */index.html */AGENTS.md brand/*/AGENTS.md brand/*/index.html brand/*/fonts/fonts.css \
   | sed -E 's/[.,:;]+$//' | sort -u | sed 's|https://asset.landit.com.au/||' \
   | while read -r p; do [ -e "${p:-index.html}" ] || [ -e "${p}index.html" ] || echo "MISSING: $p"; done
 ```

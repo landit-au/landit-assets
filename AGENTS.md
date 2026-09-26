@@ -45,6 +45,8 @@ Several files index the others, so every add, rename or removal must update them
 | A top-level folder or convention | This file's "Where to look" table and `README.md` |
 | An exported asset's name or layout | The export script in Drive (`_export/export_brand.py`) and the Drive `AGENTS.md`, so the next export matches |
 
+`llms.txt` and the root `index.html` must list the same pages and files, one for agents and one for humans; if you add a link to one, add it to the other.
+
 Renames and removals of published paths are still forbidden (see above). When a new path supersedes an old one, keep the old file and point the indexes at the new one.
 
 Before opening the PR, check that every absolute URL in the indexes maps to a file in the repo (prints nothing when clean):

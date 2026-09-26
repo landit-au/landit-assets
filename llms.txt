@@ -10,7 +10,7 @@ When building anything on-brand (web app, landing page, EDM, deck, print), read 
 - [Brand page](https://asset.landit.com.au/brand/landit/): swatches, logo downloads and the icon grid, for humans
 - [tokens.css](https://asset.landit.com.au/brand/landit/tokens.css): CSS custom properties (colours, fonts, semantic roles)
 - [tokens.json](https://asset.landit.com.au/brand/landit/tokens.json): the same tokens in W3C design-tokens format
-- [fonts.css](https://asset.landit.com.au/brand/landit/fonts/fonts.css): self-hosted Poppins (headings) and Montserrat (body) WOFF2
+- [fonts.css](https://asset.landit.com.au/brand/landit/fonts/fonts.css): self-hosted WOFF2 for the five brand weights: Poppins 500/700 (headings) and Montserrat 400/500/600 (body)
 - [Primary logo (SVG)](https://asset.landit.com.au/brand/landit/logo/landit-logo-color.svg): red mark + navy wordmark, for light backgrounds; other variants are in the brand guide
 - [Icon: bed (SVG)](https://asset.landit.com.au/brand/landit/icons/svg/bed.svg): example icon; all 18 icon names and colour variants are listed in the brand guide
 - [Favicon (SVG)](https://asset.landit.com.au/brand/landit/favicon/favicon.svg): the favicon and app-icon set lives in /brand/landit/favicon/
@@ -18,8 +18,9 @@ When building anything on-brand (web app, landing page, EDM, deck, print), read 
 
 ## Email signatures
 
-- [LANDIT signature template](https://asset.landit.com.au/email/generic/signature.html): copy-paste HTML signature (table layout, inline styles)
-- [Realtisan signature](https://asset.landit.com.au/email/realtisan/jack.html): signature for the Realtisan brand
+- [LANDIT signature for Jack](https://asset.landit.com.au/email/generic/signature.html): copy-paste HTML signature (table layout, inline styles)
+- [LANDIT signature for Elaine](https://asset.landit.com.au/email/generic/signature-elaine.html): copy-paste HTML signature (table layout, inline styles)
+- [Realtisan signature for Jack](https://asset.landit.com.au/email/realtisan/jack.html): signature for the Realtisan brand
 
 ## Optional
 

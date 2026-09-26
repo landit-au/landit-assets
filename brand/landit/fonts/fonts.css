@@ -1,0 +1,11 @@
+/* LANDIT brand fonts: Poppins (headings) + Montserrat (body). SIL OFL 1.1. */
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://asset.landit.com.au/brand/landit/fonts/poppins-400.woff2') format('woff2'); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 500; font-display: swap; src: url('https://asset.landit.com.au/brand/landit/fonts/poppins-500.woff2') format('woff2'); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; font-display: swap; src: url('https://asset.landit.com.au/brand/landit/fonts/poppins-600.woff2') format('woff2'); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap; src: url('https://asset.landit.com.au/brand/landit/fonts/poppins-700.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://asset.landit.com.au/brand/landit/fonts/montserrat-400.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: italic; font-weight: 400; font-display: swap; src: url('https://asset.landit.com.au/brand/landit/fonts/montserrat-400-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 500; font-display: swap; src: url('https://asset.landit.com.au/brand/landit/fonts/montserrat-500.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 600; font-display: swap; src: url('https://asset.landit.com.au/brand/landit/fonts/montserrat-600.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 700; font-display: swap; src: url('https://asset.landit.com.au/brand/landit/fonts/montserrat-700.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: italic; font-weight: 700; font-display: swap; src: url('https://asset.landit.com.au/brand/landit/fonts/montserrat-700-italic.woff2') format('woff2'); }

@@ -41,13 +41,14 @@ Several files index the others, so every add, rename or removal must update them
 | When you change… | Also update |
 | ---------------- | ----------- |
 | Any file or path under `brand/<brand>/` | That brand's `AGENTS.md` (Asset map) and `index.html` |
+| A signature under `email/` | `email/index.html` only (human-only; see the exception below) |
 | A brand, an asset area, or a file linked from the indexes | `llms.txt` and root `index.html` |
 | A top-level folder or convention | This file's "Where to look" table and `README.md` |
 | An exported asset's name or layout | The export script in Drive (`_export/export_brand.py`) and the Drive `AGENTS.md`, so the next export matches |
 
 `llms.txt` and the root `index.html` must cover the same **areas** (every brand and asset area): one index for agents, one for humans. Neither needs every file: per-file links live in each brand's `AGENTS.md` asset map and `index.html`. `llms.txt` may also deep-link a few key files (tokens, primary logo) for agents.
 
-**Exception: email signatures are human-only.** They contain personal contact details (names, mobile numbers, emails). List them on the root `index.html` with `rel="nofollow"`, and **never** add them to `llms.txt`, a brand `AGENTS.md`, or anything written for agents or search. `robots.txt` blocks AI crawlers from `/email/`; keep it that way.
+**Exception: email signatures are human-only.** They contain personal contact details (names, mobile numbers, emails). List them only on `email/index.html` (the root `index.html` links to that page, not to individual signatures), with `rel="nofollow"`. **Never** add them to `llms.txt`, a brand `AGENTS.md`, or anything written for agents or search. `robots.txt` blocks AI crawlers from `/email/`; keep it that way.
 
 Renames and removals of published paths are still forbidden (see above). When a new path supersedes an old one, keep the old file and point the indexes at the new one.
 

@@ -23,7 +23,7 @@ GitHub Pages serves this repo at **https://asset.landit.com.au/** (public repo `
 - **Entry points** — the only URLs external docs (Drive README, other repos) should hard-code, so they survive reorganisation:
   - `index.html` — human index of every brand and asset area.
   - `llms.txt` — machine-readable index for AI agents ([llmstxt.org](https://llmstxt.org) format).
-- `robots.txt` disallows `*.html` but allows image extensions — pages stay unindexed, asset URLs keep resolving. Everything else (`.md`, `.txt`, `.svg`, `.css`, `.woff2`, …) is allowed by default. Keep that split if new file types are added.
+- `robots.txt` disallows `*.html` but allows image extensions: pages stay unindexed, and asset URLs keep resolving. Everything else (`.md`, `.txt`, `.svg`, `.css`, `.woff2`, …) is allowed by default. A second group blocks named AI crawlers and AI search bots from `/email/` entirely. It has no `Allow` lines, because an `Allow: /*.png$` would tie with `Disallow: /email/` and re-open signature images. Keep both groups when adding file types, and add new AI user agents to the second group.
 - `.nojekyll` disables Pages' Jekyll processing so every file (including dotfiles and `_`-prefixed paths) deploys verbatim — keep it.
 
 ## The core invariant: published URLs are immutable
@@ -45,7 +45,9 @@ Several files index the others, so every add, rename or removal must update them
 | A top-level folder or convention | This file's "Where to look" table and `README.md` |
 | An exported asset's name or layout | The export script in Drive (`_export/export_brand.py`) and the Drive `AGENTS.md`, so the next export matches |
 
-`llms.txt` and the root `index.html` must list the same pages and files, one for agents and one for humans; if you add a link to one, add it to the other.
+`llms.txt` and the root `index.html` must cover the same **areas** (every brand and asset area): one index for agents, one for humans. Neither needs every file: per-file links live in each brand's `AGENTS.md` asset map and `index.html`. `llms.txt` may also deep-link a few key files (tokens, primary logo) for agents.
+
+**Exception: email signatures are human-only.** They contain personal contact details (names, mobile numbers, emails). List them on the root `index.html` with `rel="nofollow"`, and **never** add them to `llms.txt`, a brand `AGENTS.md`, or anything written for agents or search. `robots.txt` blocks AI crawlers from `/email/`; keep it that way.
 
 Renames and removals of published paths are still forbidden (see above). When a new path supersedes an old one, keep the old file and point the indexes at the new one.
 

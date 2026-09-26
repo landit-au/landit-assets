@@ -16,13 +16,13 @@ GitHub Pages serves the `main` branch root directly — no build step. Merging t
 
 - `CNAME` pins the `asset.landit.com.au` custom domain.
 - `.nojekyll` keeps Pages serving files verbatim (no Jekyll processing, so dotfiles and `_`-prefixed paths deploy).
-- `index.html` is the human index of every brand and asset area; `llms.txt` is the same index for AI agents.
-- `robots.txt` keeps HTML pages unindexed while allowing image files to be crawled.
+- `index.html` is the human index of every brand and asset area. `llms.txt` is the agent index, covering brand assets only: email signatures are deliberately excluded because they contain personal contact details.
+- `robots.txt` keeps HTML pages unindexed while allowing image files to be crawled, and blocks AI crawlers from `/email/` entirely.
 
 ## Repository structure
 
 - `brand/landit/` — LANDIT brand: `logo/`, `icons/`, `fonts/`, `favicon/`, `social/`, `templates/`, `guideline/`, `tokens.css`/`tokens.json`, a browsable `index.html` and the agent-readable `AGENTS.md`. Other brands get sibling folders (`brand/<brand>/`).
-- `email/` — email-signature HTML templates + images (`email/realtisan/` for Realtisan-brand signatures)
+- `email/` — email-signature HTML templates + images (`email/realtisan/` for Realtisan-brand signatures). `email/index.html` is the human-only list of signatures.
 
 Example:
 
@@ -54,7 +54,7 @@ git add email/new-image.png
 git commit -m "chore: Add email signature asset email/new-image.png"
 ```
 
-Every change that adds or moves a file must also update the indexes (`llms.txt`, `index.html`, the brand `AGENTS.md`) in the same PR — see the link-integrity rule in `AGENTS.md`. After merging, verify the asset loads at `https://asset.landit.com.au/<path>` before referencing it.
+Every change that adds a file must also update the relevant indexes in the same PR: the brand `AGENTS.md` and `index.html` for brand files, plus `llms.txt` and the root `index.html` for new brands or areas. A new signature goes on `email/index.html` only, **never** `llms.txt`. See the link-integrity rule in `AGENTS.md`. After merging, verify the asset loads at `https://asset.landit.com.au/<path>` before referencing it.
 
 ## Notes
 

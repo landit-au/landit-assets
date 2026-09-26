@@ -27,7 +27,7 @@ GitHub Pages serves this repo at **https://asset.landit.com.au/** (public repo `
   - `index.html` — human index of every brand and asset area.
   - `llms.txt` — machine-readable index for AI agents ([llmstxt.org](https://llmstxt.org) format).
 - `robots.txt` has three groups. Test any change against them, and keep new file types and AI user agents in the right group. The rules are longest-match, and on a tie `Allow` wins.
-  - **All crawlers (`*`):** `*.html` pages and everything under `/email/` are closed. `Disallow: /email/*` is one character longer than `Allow: /*.png$`, so it wins. Brand images stay crawlable. Email clients aren't crawlers and ignore `robots.txt`, so signatures still render. Other brands (`/brand/*` except `/brand/landit/`), `llms.txt` (it names them) and the repo docs (`/AGENTS.md`, `/README.md`, `/CLAUDE.md`) are closed too.
+  - **All crawlers (`*`):** `*.html` pages, the `/email/` index and `/email/` docs are closed. Images stay crawlable, including signature portraits. That's intentional, so Gmail and Outlook render them without surprises; contact details live only in the closed HTML. Other brands (`/brand/*` except `/brand/landit/`), `llms.txt` (it names them) and the repo docs (`/AGENTS.md`, `/README.md`, `/CLAUDE.md`) are closed too.
   - **AI crawlers and AI search** (GPTBot, ClaudeBot, PerplexityBot, …): the same, plus all of `/email/`. This group has no image `Allow` lines, because `Allow: /*.png$` would tie with `Disallow: /email/` and re-open signature images.
   - **User-triggered AI assistants** (Claude-User, ChatGPT-User, Perplexity-User), which only fetch because a person asked: may read `llms.txt` and every brand, never `/email/`.
 - `.nojekyll` disables Pages' Jekyll processing so every file (including dotfiles and `_`-prefixed paths) deploys verbatim — keep it.
@@ -55,7 +55,7 @@ Several files index the others, so every add, rename or removal must update them
 
 `llms.txt` and the root `index.html` must cover the same **areas** (every brand and asset area): one index for agents, one for humans. Neither needs every file: per-file links live in each brand's `AGENTS.md` asset map and `index.html`. `llms.txt` may also deep-link a few key files (tokens, primary logo) for agents.
 
-**Exception: email signatures are human-only.** They contain personal contact details (names, mobile numbers, emails). List them only on `email/index.html` (the root `index.html` links to that page, not to individual signatures), with `rel="nofollow"`. **Never** add them to `llms.txt`, a brand `AGENTS.md`, or anything written for agents or search. `robots.txt` closes `/email/` to every crawler and AI agent; keep it that way.
+**Exception: email signatures are human-only.** They contain personal contact details (names, mobile numbers, emails). List them only on `email/index.html` (the root `index.html` links to that page, not to individual signatures), with `rel="nofollow"`. **Never** add them to `llms.txt`, a brand `AGENTS.md`, or anything written for agents or search. `robots.txt` closes the signature pages to every crawler and AI agent (AI crawlers get the whole folder), and leaves images fetchable; keep it that way.
 
 Renames and removals of published paths are still forbidden (see above). When a new path supersedes an old one, keep the old file and point the indexes at the new one.
 

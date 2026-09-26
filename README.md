@@ -17,7 +17,7 @@ GitHub Pages serves the `main` branch root directly — no build step. Merging t
 - `CNAME` pins the `asset.landit.com.au` custom domain.
 - `.nojekyll` keeps Pages serving files verbatim (no Jekyll processing, so dotfiles and `_`-prefixed paths deploy).
 - `index.html` is the human index of every brand and asset area. `llms.txt` is the agent index for every brand. It's closed to search engines because it names non-LANDIT brands. Email signatures are deliberately excluded from it because they contain personal contact details.
-- `robots.txt` keeps HTML pages unindexed and LANDIT brand files crawlable, and closes `/email/` to every crawler and AI agent. Only the LANDIT brand is open to search; other brands, `llms.txt` and the repo docs are closed to search but open to agents a person points at the site.
+- `robots.txt` keeps HTML pages unindexed and LANDIT brand files crawlable, and closes signature pages to every crawler and AI agent (images stay fetchable so mail clients render them). Only the LANDIT brand is open to search; other brands, `llms.txt` and the repo docs are closed to search but open to agents a person points at the site.
 
 ## Repository structure
 

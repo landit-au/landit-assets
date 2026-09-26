@@ -1,6 +1,6 @@
 # LANDIT Assets
 
-> Public, permanent-URL host for LANDIT brand assets (logos, icons, fonts, colour tokens, templates). LANDIT is a Sydney real-estate business (House · Land · Investment). Every file here is served verbatim at https://asset.landit.com.au/<repo path>; URLs never change.
+> Permanent-URL host for LANDIT brand assets (logos, icons, fonts, colour tokens, templates) and those of related brands. LANDIT is a Sydney real-estate business (House · Land · Investment). Every file here is served verbatim at https://asset.landit.com.au/<repo path>; URLs never change.
 
 When building anything on-brand (web app, landing page, EDM, deck, print), read the brand guide first and use the published asset URLs rather than recreating logos or icons. Human-browsable version: https://asset.landit.com.au/
 
@@ -15,6 +15,10 @@ When building anything on-brand (web app, landing page, EDM, deck, print), read 
 - [Icon: bed (SVG)](https://asset.landit.com.au/brand/landit/icons/svg/bed.svg): example icon; all 18 icon names and colour variants are listed in the brand guide
 - [Favicon (SVG)](https://asset.landit.com.au/brand/landit/favicon/favicon.svg): the favicon and app-icon set lives in /brand/landit/favicon/
 - [Brand guideline PDF](https://asset.landit.com.au/brand/landit/guideline/landit-brand-guideline.pdf): the designer's guideline, the authoritative source for the rules in the brand guide
+
+## Other brands
+
+Related brands use the same layout as LANDIT at https://asset.landit.com.au/brand/<brand>/ (AGENTS.md brand guide, index.html, logo/, icons/, fonts/, tokens.css). Each one is listed here once published. They're kept out of search engines but are meant for agents, so use them when asked to work in that brand.
 
 ## Optional
 

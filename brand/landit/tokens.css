@@ -33,6 +33,12 @@
   /* Typography */
   --landit-font-heading: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
   --landit-font-body: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  /* The five brand weights; fonts.css publishes only these */
+  --landit-weight-heading: 500;  /* Poppins: H2–H4 */
+  --landit-weight-display: 700;  /* Poppins: display, H1, figures */
+  --landit-weight-body: 400;     /* Montserrat: body, captions */
+  --landit-weight-label: 500;    /* Montserrat: nav, labels */
+  --landit-weight-strong: 600;   /* Montserrat: buttons, emphasis */
 
   /* Logo and icons */
   --landit-logo-clearspace: 24px;

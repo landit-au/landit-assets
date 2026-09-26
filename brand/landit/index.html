@@ -12,8 +12,8 @@
     * { box-sizing: border-box; }
     body { margin: 0; font-family: var(--landit-font-body); color: var(--landit-text); background: var(--landit-surface); line-height: 1.6; }
     h1, h2, h3 { font-family: var(--landit-font-heading); line-height: 1.2; margin: 0 0 12px; }
-    h2 { font-size: 28px; font-weight: 600; margin-top: 8px; }
-    h3 { font-size: 18px; font-weight: 600; }
+    h2 { font-size: 28px; margin-top: 8px; }
+    h3 { font-size: 18px; }
     a { color: var(--landit-red); }
     code { font-size: 13px; }
     .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
@@ -39,8 +39,11 @@
     .icon img { display: block; margin-bottom: 8px; }
     .icon code { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
     .icon span { display: block; }
-    .type-sample { font-family: var(--landit-font-heading); font-size: 40px; font-weight: 700; margin: 0; }
-    .type-sample.body { font-family: var(--landit-font-body); font-size: 18px; font-weight: 400; }
+    .type-scale .row { display: grid; grid-template-columns: minmax(0, 230px) minmax(0, 1fr); gap: 16px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--landit-surface-alt); }
+    .type-scale .spec { font-size: 12px; color: var(--landit-text-muted); }
+    @media (max-width: 600px) { .type-scale .row { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
+    strong { font-weight: 600; }
+    h2, h3 { font-weight: 500; }
     ul.links { padding-left: 18px; margin: 0; }
     .agents { background: var(--landit-surface-alt); border-radius: 8px; padding: 20px; }
     pre { background: var(--landit-navy); color: #fff; padding: 14px; border-radius: 8px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; }
@@ -118,11 +121,24 @@
 
     <section>
       <h2>Typography</h2>
-      <div class="grid">
-        <div><p class="type-sample">Poppins</p><p class="muted">Headings · 500–700</p></div>
-        <div><p class="type-sample body">Montserrat: body copy, buttons and labels. Land your dream house.</p><p class="muted">Body · 400–600</p></div>
+      <p class="muted">Two families, five weights. Poppins for headings and figures; Montserrat for everything you read. No other weights, no italics, no other fonts.</p>
+      <div class="type-scale">
+        <div class="row"><span class="spec">Display · Poppins 700 · 56/36 px</span><span style="font-family:var(--landit-font-heading);font-weight:700;font-size:clamp(36px,6vw,56px);line-height:1.1">Land your dream house</span></div>
+        <div class="row"><span class="spec">H1 · Poppins 700 · 40/32 px</span><span style="font-family:var(--landit-font-heading);font-weight:700;font-size:clamp(32px,4.5vw,40px);line-height:1.15">House, land and investment</span></div>
+        <div class="row"><span class="spec">H2 · Poppins 500 · 32/26 px</span><span style="font-family:var(--landit-font-heading);font-weight:500;font-size:clamp(26px,3.5vw,32px);line-height:1.2">Why buyers choose LANDIT</span></div>
+        <div class="row"><span class="spec">H3 · Poppins 500 · 24/20 px</span><span style="font-family:var(--landit-font-heading);font-weight:500;font-size:clamp(20px,2.6vw,24px);line-height:1.3">Rouse Hill land release</span></div>
+        <div class="row"><span class="spec">Figure · Poppins 700 · 24–32 px</span><span style="font-family:var(--landit-font-heading);font-weight:700;font-size:28px;line-height:1.2">$1,250,000 · 4 bed · 2 bath</span></div>
+        <div class="row"><span class="spec">Eyebrow · Montserrat 600 · 13 px caps</span><span style="font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--landit-red)">Just listed</span></div>
+        <div class="row"><span class="spec">Body · Montserrat 400 · 16–18 px</span><span style="font-size:17px;line-height:1.6;max-width:62ch">We guide buyers and investors through every step, from the first inspection to settlement, with clear local advice. <strong style="font-weight:600">Emphasis uses SemiBold 600.</strong></span></div>
+        <div class="row"><span class="spec">Label · Montserrat 500 · 14–16 px</span><span style="font-weight:500;font-size:15px">Suburb · Property type · Price range</span></div>
+        <div class="row"><span class="spec">Button · Montserrat 600 · 16 px</span><span><span style="display:inline-block;background:var(--landit-red);color:#fff;font-weight:600;font-size:16px;padding:12px 22px;border-radius:6px">Book an inspection</span></span></div>
+        <div class="row"><span class="spec">Caption · Montserrat 400 · 12–14 px</span><span style="font-size:13px;line-height:1.5;color:var(--landit-text-muted)">Price guide is an estimate only. Images are indicative.</span></div>
       </div>
-      <p>Add <a href="https://asset.landit.com.au/brand/landit/fonts/fonts.css">fonts.css</a> to load both (self-hosted WOFF2, Latin). Licences: <a href="https://asset.landit.com.au/brand/landit/fonts/OFL-poppins.txt">Poppins OFL</a> · <a href="https://asset.landit.com.au/brand/landit/fonts/OFL-montserrat.txt">Montserrat OFL</a></p>
+      <div class="grid" style="margin-top:20px">
+        <div><h3>Do</h3><ul class="links"><li>Sentence case for headings and buttons</li><li>Left-align body; 60–75 characters per line</li><li>Emphasise with SemiBold 600, not italics</li><li>Always include the fallback stack</li></ul></div>
+        <div><h3>Don't</h3><ul class="links"><li>Body in Poppins, or headings in Montserrat</li><li>Light, Thin, ExtraBold, Black or faux bold/italic</li><li>Other fonts (LEMONMILK, Calibri, Myriad)</li><li>Type "LANDIT" instead of using the logo</li><li>Body under 16 px, or any text under 12 px</li></ul></div>
+      </div>
+      <p>Add <a href="https://asset.landit.com.au/brand/landit/fonts/fonts.css">fonts.css</a> to load the five weights (self-hosted WOFF2). Licences: <a href="https://asset.landit.com.au/brand/landit/fonts/OFL-poppins.txt">Poppins OFL</a> · <a href="https://asset.landit.com.au/brand/landit/fonts/OFL-montserrat.txt">Montserrat OFL</a>. Full scale, EDM and print sizes: <a href="https://asset.landit.com.au/brand/landit/AGENTS.md">brand guide</a>.</p>
     </section>
 
     <section>

@@ -4,6 +4,8 @@ Read alongside the root `AGENTS.md`; the published-URL immutability rule applies
 
 **Live files — never rename, move, or delete:** `jack.png` and `elaine.png` at this folder's root are hard-coded into `generic/signature.html` and `generic/signature-elaine.html`, which are already pasted into third-party email systems. Every open of those emails fetches `https://asset.landit.com.au/email/jack.png` / `https://asset.landit.com.au/email/elaine.png` — those paths must keep serving.
 
+**Privacy: signatures are human-only.** They contain personal contact details. Link them only from the root `index.html` (with `rel="nofollow"`). Never list them in `llms.txt`, brand guides or other agent-facing indexes. `robots.txt` blocks AI crawlers from this folder, and all crawlers from `*.html`. Don't add `<meta>` robots tags to the signature files: they're fragments pasted into mail clients, so the tag would end up inside people's signatures.
+
 Signature HTML files are copy-paste templates rendered by recipients' mail clients: table layout, fully inline styles only — no external CSS, no `<link>`, no `<style>` reliance, no scripts. Every `img src` must be an absolute `https://asset.landit.com.au/...` URL.
 
 Layout:

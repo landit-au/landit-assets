@@ -1,54 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="5;url=https://landit.com.au/" />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>landit-assets</title>
+  <title>LANDIT Assets</title>
+  <link rel="icon" href="https://asset.landit.com.au/brand/landit/favicon/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="https://asset.landit.com.au/brand/landit/fonts/fonts.css" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 40px;
-      background: #f7f7f7;
-      color: #111;
-    }
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 20px 45px rgba(0,0,0,0.08);
-      padding: 32px;
-    }
-    h1 {
-      margin-top: 0;
-      color: #1a1a1a;
-    }
-    p {
-      margin: 1em 0;
-    }
-    .link {
-      display: inline-block;
-      margin-top: 24px;
-      padding: 12px 18px;
-      background: #0066cc;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; color: #1A1B26; background: #F4F4F5; line-height: 1.6; }
+    h1, h2 { font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif; line-height: 1.2; }
+    a { color: #D31E31; }
+    header { background: #1A1B26; color: #fff; padding: 40px 20px; }
+    header img { width: 200px; height: auto; display: block; margin-bottom: 20px; }
+    header p { margin: 0; }
+    main { max-width: 820px; margin: 0 auto; padding: 24px 20px 48px; }
+    .card { background: #fff; border-radius: 10px; padding: 20px 24px; margin-bottom: 16px; }
+    .card h2 { margin: 0 0 8px; font-size: 22px; }
+    .card p { margin: 0 0 8px; }
+    ul { margin: 0; padding-left: 18px; }
+    code { font-size: 13px; }
+    .muted { color: #5F5F67; font-size: 14px; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>landit-assets</h1>
-    <p>This repository hosts static media assets used for email signatures and other asset references.</p>
-    <p>File paths and names are intentionally stable so embedded images do not break when referenced from external locations.</p>
-    <p>You will be redirected to <strong>https://landit.com.au/</strong> in a few seconds.</p>
-    <p>If the redirect does not work, click the link below:</p>
-    <a class="link" href="https://landit.com.au/">Go to landit.com.au</a>
-  </div>
+  <header>
+    <div style="max-width:820px;margin:0 auto">
+      <img src="https://asset.landit.com.au/brand/landit/logo/landit-logo-color-reversed.svg" alt="LANDIT" />
+      <h1 style="margin:0 0 8px">Assets</h1>
+      <p>Official brand assets and email-signature files. Every URL on this site is permanent.</p>
+    </div>
+  </header>
+  <main>
+    <div class="card">
+      <h2>LANDIT brand</h2>
+      <p>Logos, icons, fonts, colours, social banners and templates.</p>
+      <ul>
+        <li><a href="https://asset.landit.com.au/brand/landit/">Brand page</a>: browse and download</li>
+        <li><a href="https://asset.landit.com.au/brand/landit/AGENTS.md">Brand guide</a>: the rules (for people and AI agents)</li>
+        <li><a href="https://asset.landit.com.au/brand/landit/guideline/landit-brand-guideline.pdf">Brand guideline PDF</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Email signatures</h2>
+      <ul>
+        <li><a href="https://asset.landit.com.au/email/generic/signature.html">LANDIT signature (Jack)</a> · <a href="https://asset.landit.com.au/email/generic/signature-elaine.html">LANDIT signature (Elaine)</a></li>
+        <li><a href="https://asset.landit.com.au/email/realtisan/jack.html">Realtisan signature (Jack)</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Using these with AI tools</h2>
+      <p>Point your agent (Claude Code, Claude Design, Cursor, Devin, etc.) at the machine-readable index:</p>
+      <p><code>https://asset.landit.com.au/llms.txt</code></p>
+      <p class="muted">Or add to your project's AGENTS.md: "Brand: follow https://asset.landit.com.au/brand/landit/AGENTS.md. Use the published asset URLs and tokens.css; don't redraw logos or icons."</p>
+    </div>
+    <p class="muted"><a href="https://landit.com.au/">landit.com.au</a> · <a href="https://github.com/landit-au/landit-assets">Source on GitHub</a></p>
+  </main>
 </body>
 </html>

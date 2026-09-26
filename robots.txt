@@ -1,18 +1,18 @@
 # Search: only the LANDIT brand is discoverable. Other brands under /brand/ (and future ones)
 # and llms.txt (which lists them) are closed to search engines and AI crawlers, but stay open
 # to agents a person points at the site. Email signatures (personal contact details) are
-# closed to every crawler and AI, and are for humans only.
+# pages are closed to every crawler and AI, and are for humans only (their images stay fetchable).
 # Precedence is longest-match: /brand/* (8 chars) beats /*.png$ (7), and /brand/landit/ beats /brand/*.
 
 # Search engines and all other crawlers.
-# Pages stay unindexed; brand images stay crawlable. /email/* (8 chars) beats Allow /*.png$ (7),
-# so signature images are closed too. Email clients aren't crawlers and ignore robots.txt.
+# Pages stay unindexed; images stay crawlable, including signature portraits (Gmail/Outlook render them).
 User-agent: *
 Disallow: /*.html$
 Disallow: /brand/*
 Allow: /brand/landit/
 Disallow: /brand/landit/*.html$
-Disallow: /email/*
+Disallow: /email/$
+Disallow: /email/*.md$
 Disallow: /AGENTS.md
 Disallow: /CLAUDE.md
 Disallow: /README.md

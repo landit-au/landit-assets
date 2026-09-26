@@ -13,7 +13,7 @@ This file holds only cross-cutting guidance. Area-specific rules live in a neste
 | Email signatures (HTML templates + hotlinked images, per-brand folders) | `email/AGENTS.md` |
 | LANDIT brand guide — colours, logo, type, icons, voice, brand asset map | `brand/landit/AGENTS.md` |
 
-Brand assets live in `brand/<brand>/` (`brand/landit/` primary; other brands such as `realtisan`, `sapphire` get sibling folders with the same layout: `AGENTS.md`, `index.html`, `logo/`, `icons/`, `fonts/`, …). Brand files are exported from the masters in LANDIT's Google Drive, never hand-drawn here.
+Brand assets live in `brand/<brand>/` (`brand/landit/` primary; other brands get sibling folders with the same layout: `AGENTS.md`, `index.html`, `logo/`, `icons/`, `fonts/`, …). **Only LANDIT is discoverable.** Other brands are unlisted: never in `llms.txt`, linked from the root `index.html` only with `rel="nofollow"`, and excluded from search by `robots.txt` (`/brand/*` except `/brand/landit/`, so new brand folders are covered automatically). Brand files are exported from the masters in LANDIT's Google Drive, never hand-drawn here.
 
 ## Deployment
 
@@ -23,7 +23,10 @@ GitHub Pages serves this repo at **https://asset.landit.com.au/** (public repo `
 - **Entry points** — the only URLs external docs (Drive README, other repos) should hard-code, so they survive reorganisation:
   - `index.html` — human index of every brand and asset area.
   - `llms.txt` — machine-readable index for AI agents ([llmstxt.org](https://llmstxt.org) format).
-- `robots.txt` disallows `*.html` but allows image extensions: pages stay unindexed, and asset URLs keep resolving. Everything else (`.md`, `.txt`, `.svg`, `.css`, `.woff2`, …) is allowed by default. A second group blocks named AI crawlers and AI search bots from `/email/` entirely. It has no `Allow` lines, because an `Allow: /*.png$` would tie with `Disallow: /email/` and re-open signature images. Keep both groups when adding file types, and add new AI user agents to the second group.
+- `robots.txt` has three groups. Test any change against them, and keep new file types and AI user agents in the right group. The rules are longest-match, and on a tie `Allow` wins.
+  - **All crawlers (`*`):** `*.html` pages and `/email/` pages are closed. Images stay fetchable, because email clients load signature images from here. Other brands (`/brand/*` except `/brand/landit/`) and the repo docs (`/AGENTS.md`, `/README.md`, `/CLAUDE.md`) are closed too.
+  - **AI crawlers and AI search** (GPTBot, ClaudeBot, PerplexityBot, …): the same, plus all of `/email/`. This group has no image `Allow` lines, because `Allow: /*.png$` would tie with `Disallow: /email/` and re-open signature images.
+  - **User-triggered AI assistants** (Claude-User, ChatGPT-User, Perplexity-User), which only fetch because a person asked: may read any brand guide, never `/email/`.
 - `.nojekyll` disables Pages' Jekyll processing so every file (including dotfiles and `_`-prefixed paths) deploys verbatim — keep it.
 
 ## The core invariant: published URLs are immutable
@@ -42,7 +45,8 @@ Several files index the others, so every add, rename or removal must update them
 | ---------------- | ----------- |
 | Any file or path under `brand/<brand>/` | That brand's `AGENTS.md` (Asset map) and `index.html` |
 | A signature under `email/` | `email/index.html` only (human-only; see the exception below) |
-| A brand, an asset area, or a file linked from the indexes | `llms.txt` and root `index.html` |
+| LANDIT or a new asset area, or a file linked from the indexes | `llms.txt` and root `index.html` |
+| A new non-LANDIT brand | Root `index.html` only (`rel="nofollow"`); never `llms.txt` |
 | A top-level folder or convention | This file's "Where to look" table and `README.md` |
 | An exported asset's name or layout | The export script in Drive (`_export/export_brand.py`) and the Drive `AGENTS.md`, so the next export matches |
 

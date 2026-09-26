@@ -1,22 +1,32 @@
+# Only the LANDIT brand is discoverable. Other brands under /brand/ (and future ones) are
+# excluded from search, and email signatures (personal contact details) from search and AI.
+# Precedence is longest-match: /brand/* (8 chars) beats /*.png$ (7), and /brand/landit/ beats /brand/*.
+
+# Search engines and all other crawlers.
 # Pages stay unindexed; images stay fetchable (email clients load signature images from here).
 User-agent: *
 Disallow: /*.html$
+Disallow: /brand/*
+Allow: /brand/landit/
+Disallow: /brand/landit/*.html$
+Disallow: /email/$
+Disallow: /email/*.md$
+Disallow: /AGENTS.md
+Disallow: /CLAUDE.md
+Disallow: /README.md
 Allow: /*.png$
 Allow: /*.jpg$
 Allow: /*.jpeg$
 Allow: /*.gif$
 
-# AI crawlers, AI search and AI assistants: never read email signatures (personal contact details).
-# No Allow lines here on purpose: an Allow for *.png would re-open /email/ images.
+# AI crawlers and AI search: LANDIT brand only; nothing under /email/.
+# No image Allow lines on purpose: an Allow for *.png would re-open /email/ images.
 User-agent: GPTBot
 User-agent: OAI-SearchBot
-User-agent: ChatGPT-User
 User-agent: ClaudeBot
 User-agent: Claude-SearchBot
-User-agent: Claude-User
 User-agent: anthropic-ai
 User-agent: PerplexityBot
-User-agent: Perplexity-User
 User-agent: Google-Extended
 User-agent: Applebot-Extended
 User-agent: CCBot
@@ -24,5 +34,19 @@ User-agent: Bytespider
 User-agent: meta-externalagent
 User-agent: Amazonbot
 User-agent: cohere-ai
+Disallow: /email/
+Disallow: /*.html$
+Disallow: /brand/*
+Allow: /brand/landit/
+Disallow: /brand/landit/*.html$
+Disallow: /AGENTS.md
+Disallow: /CLAUDE.md
+Disallow: /README.md
+
+# AI assistants fetching a URL because a person asked (not search): brand guides are fine,
+# email signatures are not.
+User-agent: ChatGPT-User
+User-agent: Claude-User
+User-agent: Perplexity-User
 Disallow: /email/
 Disallow: /*.html$

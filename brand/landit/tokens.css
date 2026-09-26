@@ -1,0 +1,42 @@
+/* LANDIT design tokens — https://asset.landit.com.au/brand/landit/tokens.css
+   Rules for using them: https://asset.landit.com.au/brand/landit/AGENTS.md
+   Fonts: add https://asset.landit.com.au/brand/landit/fonts/fonts.css alongside this file. */
+:root {
+  /* Brand colours */
+  --landit-red: #D31E31;
+  --landit-navy: #1A1B26;
+  --landit-white: #FFFFFF;
+
+  /* Tints: 10–50% mixes with white, from the brand guideline */
+  --landit-red-90: #D73446;
+  --landit-red-80: #DB4B5A;
+  --landit-red-70: #E0616F;
+  --landit-red-60: #E47883;
+  --landit-red-50: #E88E97;
+  --landit-navy-90: #31323C;
+  --landit-navy-80: #474851;
+  --landit-navy-70: #5F5F67; /* lightest navy allowed for text on white */
+  --landit-navy-60: #75767C;
+  --landit-navy-50: #8C8C92; /* borders and disabled only, never text */
+  --landit-surface-alt: #F4F4F5; /* alternating sections and cards on white */
+
+  /* Semantic roles */
+  --landit-text: var(--landit-navy);
+  --landit-text-muted: var(--landit-navy-70);
+  --landit-surface: var(--landit-white);
+  --landit-surface-impact: var(--landit-navy);
+  --landit-accent: var(--landit-red);
+  --landit-cta-bg: var(--landit-red);
+  --landit-cta-bg-hover: var(--landit-red-90);
+  --landit-cta-text: var(--landit-white);
+
+  /* Typography */
+  --landit-font-heading: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+  --landit-font-body: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Logo and icons */
+  --landit-logo-clearspace: 24px;
+  --landit-logo-min-width: 120px;
+  --landit-mark-min-size: 16px;
+  --landit-icon-size: 24px;
+}

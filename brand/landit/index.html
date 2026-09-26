@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>LANDIT Brand Assets</title>
+  <link rel="icon" href="https://asset.landit.com.au/brand/landit/favicon/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="https://asset.landit.com.au/brand/landit/fonts/fonts.css" />
+  <link rel="stylesheet" href="https://asset.landit.com.au/brand/landit/tokens.css" />
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--landit-font-body); color: var(--landit-text); background: var(--landit-surface); line-height: 1.6; }
+    h1, h2, h3 { font-family: var(--landit-font-heading); line-height: 1.2; margin: 0 0 12px; }
+    h2 { font-size: 28px; font-weight: 600; margin-top: 8px; }
+    h3 { font-size: 18px; font-weight: 600; }
+    a { color: var(--landit-red); }
+    code { font-size: 13px; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--landit-navy); color: #fff; padding: 48px 0 40px; }
+    header img { width: 220px; height: auto; display: block; margin-bottom: 24px; }
+    header p { margin: 0; max-width: 680px; color: #fff; overflow-wrap: anywhere; }
+    header a { color: #fff; }
+    section { padding: 40px 0; border-bottom: 1px solid var(--landit-surface-alt); }
+    .muted { color: var(--landit-text-muted); }
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr)); }
+    .card { border: 1px solid #E4E4E7; border-radius: 8px; overflow: hidden; }
+    .card .body { padding: 12px 14px; font-size: 14px; }
+    .swatch { height: 96px; }
+    .logo-tile { height: 140px; display: flex; align-items: center; justify-content: center; padding: 24px; }
+    .logo-tile img { max-width: 100%; max-height: 72px; }
+    .on-white { background: #fff; border-bottom: 1px solid #E4E4E7; }
+    .on-navy { background: var(--landit-navy); }
+    .on-red { background: var(--landit-red); }
+    .tints { display: flex; height: 28px; }
+    .tints span { flex: 1; }
+    .icons { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(170px, 100%), 1fr)); }
+    .icon { margin: 0; border: 1px solid #E4E4E7; border-radius: 8px; padding: 14px; font-size: 12px; }
+    .icon img { display: block; margin-bottom: 8px; }
+    .icon code { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+    .icon span { display: block; }
+    .type-sample { font-family: var(--landit-font-heading); font-size: 40px; font-weight: 700; margin: 0; }
+    .type-sample.body { font-family: var(--landit-font-body); font-size: 18px; font-weight: 400; }
+    ul.links { padding-left: 18px; margin: 0; }
+    .agents { background: var(--landit-surface-alt); border-radius: 8px; padding: 20px; }
+    pre { background: var(--landit-navy); color: #fff; padding: 14px; border-radius: 8px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <img src="https://asset.landit.com.au/brand/landit/logo/landit-logo-color-reversed.svg" alt="LANDIT" />
+      <h1>Brand assets</h1>
+      <p>Official, web-ready LANDIT logos, icons, fonts, colours and templates. Every link here is a permanent URL you can hotlink.
+        Rules for using them: <a href="https://asset.landit.com.au/brand/landit/AGENTS.md">brand guide (AGENTS.md)</a> ·
+        <a href="https://asset.landit.com.au/brand/landit/guideline/landit-brand-guideline.pdf">guideline PDF</a>.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Using this with AI tools</h2>
+      <div class="agents">
+        <p>Give your AI agent (Claude Code, Claude Design, Cursor, Devin, etc.) this line, or add it to your project's <code>AGENTS.md</code>:</p>
+        <pre>Follow the LANDIT brand guide at https://asset.landit.com.au/brand/landit/AGENTS.md
+(index of all assets: https://asset.landit.com.au/llms.txt). Use the published asset URLs; don't redraw logos or icons.</pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>Which format to use</h2>
+      <div class="grid">
+        <div><h3>Web app (React etc.)</h3><p>Logos: SVG. Icons: inline SVG (<code>&lt;name&gt;.svg</code>, import as components) coloured with CSS <code>color</code>.</p></div>
+        <div><h3>Landing pages</h3><p>Logos: SVG. Icons: inline SVG, or the fixed-colour SVG in an <code>&lt;img&gt;</code>. Favicon: the <code>favicon/</code> set.</p></div>
+        <div><h3>EDM (email)</h3><p>Logos: PNG @2x shown at half size. Icons: PNG. Email clients don't render SVG reliably. Absolute URLs only.</p></div>
+        <div><h3>Print</h3><p>Logos and icons: SVG (vector, any size), or ask for the PDF/EPS masters. Never the web PNGs.</p></div>
+        <div><h3>Docs and slides</h3><p>PNG @2x (or SVG where supported). Start decks from the deck template.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Colour</h2>
+      <p class="muted">Default: white surface, navy text, red accents. Impact (headers, banners): navy surface, white text, red mark. Red surfaces take white only.</p>
+      <div class="grid">
+        <div class="card"><div class="swatch" style="background:#D31E31"></div>
+          <div class="tints"><span style="background:#D73446"></span><span style="background:#DB4B5A"></span><span style="background:#E0616F"></span><span style="background:#E47883"></span><span style="background:#E88E97"></span></div>
+          <div class="body"><strong>Red</strong> <code>#D31E31</code><br />RGB 211 30 49 · CMYK 11 100 89 2<br /><code>--landit-red</code></div></div>
+        <div class="card"><div class="swatch" style="background:#1A1B26"></div>
+          <div class="tints"><span style="background:#31323C"></span><span style="background:#474851"></span><span style="background:#5F5F67"></span><span style="background:#75767C"></span><span style="background:#8C8C92"></span></div>
+          <div class="body"><strong>Navy</strong> <code>#1A1B26</code><br />RGB 26 27 38 · CMYK 80 74 56 71<br /><code>--landit-navy</code></div></div>
+        <div class="card"><div class="swatch" style="background:#FFFFFF;border-bottom:1px solid #E4E4E7"></div>
+          <div class="tints"><span style="background:#F4F4F5"></span></div>
+          <div class="body"><strong>White</strong> <code>#FFFFFF</code><br />Alt surface <code>#F4F4F5</code><br /><code>--landit-white</code></div></div>
+      </div>
+      <p>Tokens: <a href="https://asset.landit.com.au/brand/landit/tokens.css">tokens.css</a> · <a href="https://asset.landit.com.au/brand/landit/tokens.json">tokens.json</a></p>
+    </section>
+
+    <section>
+      <h2>Logo</h2>
+      <p class="muted">Clear space at least 24 px. Full logo at least 120 px wide on screen (30 mm in print); smaller than that, use the mark alone (at least 16 px). Use PNG in email.</p>
+      <div class="grid">
+        <div class="card"><div class="logo-tile on-white"><img src="https://asset.landit.com.au/brand/landit/logo/landit-logo-color.svg" alt="LANDIT colour logo" /></div>
+          <div class="body"><strong>Colour</strong> (primary): on white<br /><a href="https://asset.landit.com.au/brand/landit/logo/landit-logo-color.svg">SVG</a> · <a href="https://asset.landit.com.au/brand/landit/logo/landit-logo-color.png">PNG</a> · <a href="https://asset.landit.com.au/brand/landit/logo/landit-logo-color@2x.png">PNG @2x</a></div></div>
+        <div class="card"><div class="logo-tile on-navy"><img src="https://asset.landit.com.au/brand/landit/logo/landit-logo-color-reversed.svg" alt="LANDIT reversed logo" /></div>
+          <div class="body"><strong>Colour reversed</strong>: on navy<br /><a href="https://asset.landit.com.au/brand/landit/logo/landit-logo-color-reversed.svg">SVG</a> · <a href="https://asset.landit.com.au/brand/landit/logo/landit-logo-color-reversed.png">PNG</a> · <a href="https://asset.landit.com.au/brand/landit/logo/landit-logo-color-reversed@2x.png">PNG @2x</a></div></div>
+        <div class="card"><div class="logo-tile on-red"><img src="https://asset.landit.com.au/brand/landit/logo/landit-logo-white.svg" alt="LANDIT white logo" /></div>
+          <div class="body"><strong>White</strong>: on red or photos<br /><a href="https://asset.landit.com.au/brand/landit/logo/landit-logo-white.svg">SVG</a> · <a href="https://asset.landit.com.au/brand/landit/logo/landit-logo-white.png">PNG</a> · <a href="https://asset.landit.com.au/brand/landit/logo/landit-logo-white@2x.png">PNG @2x</a></div></div>
+        <div class="card"><div class="logo-tile on-white"><img src="https://asset.landit.com.au/brand/landit/logo/landit-logo-navy.svg" alt="LANDIT navy logo" /></div>
+          <div class="body"><strong>Navy</strong>: single colour<br /><a href="https://asset.landit.com.au/brand/landit/logo/landit-logo-navy.svg">SVG</a> · <a href="https://asset.landit.com.au/brand/landit/logo/landit-logo-navy.png">PNG</a> · <a href="https://asset.landit.com.au/brand/landit/logo/landit-logo-navy@2x.png">PNG @2x</a></div></div>
+        <div class="card"><div class="logo-tile on-white"><img src="https://asset.landit.com.au/brand/landit/logo/landit-mark-red.svg" alt="LANDIT mark, red" /></div>
+          <div class="body"><strong>Mark, red</strong>: on white or navy<br /><a href="https://asset.landit.com.au/brand/landit/logo/landit-mark-red.svg">SVG</a> · <a href="https://asset.landit.com.au/brand/landit/logo/landit-mark-red.png">PNG</a> · <a href="https://asset.landit.com.au/brand/landit/logo/landit-mark-red@2x.png">PNG @2x</a></div></div>
+        <div class="card"><div class="logo-tile on-red"><img src="https://asset.landit.com.au/brand/landit/logo/landit-mark-white.svg" alt="LANDIT mark, white" /></div>
+          <div class="body"><strong>Mark, white</strong>: on red or navy<br /><a href="https://asset.landit.com.au/brand/landit/logo/landit-mark-white.svg">SVG</a> · <a href="https://asset.landit.com.au/brand/landit/logo/landit-mark-white.png">PNG</a> · <a href="https://asset.landit.com.au/brand/landit/logo/landit-mark-white@2x.png">PNG @2x</a></div></div>
+        <div class="card"><div class="logo-tile on-white"><img src="https://asset.landit.com.au/brand/landit/logo/landit-mark-navy.svg" alt="LANDIT mark, navy" /></div>
+          <div class="body"><strong>Mark, navy</strong>: single colour<br /><a href="https://asset.landit.com.au/brand/landit/logo/landit-mark-navy.svg">SVG</a> · <a href="https://asset.landit.com.au/brand/landit/logo/landit-mark-navy.png">PNG</a> · <a href="https://asset.landit.com.au/brand/landit/logo/landit-mark-navy@2x.png">PNG @2x</a></div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <div class="grid">
+        <div><p class="type-sample">Poppins</p><p class="muted">Headings · 500–700</p></div>
+        <div><p class="type-sample body">Montserrat: body copy, buttons and labels. Land your dream house.</p><p class="muted">Body · 400–600</p></div>
+      </div>
+      <p>Add <a href="https://asset.landit.com.au/brand/landit/fonts/fonts.css">fonts.css</a> to load both (self-hosted WOFF2, Latin). Licences: <a href="https://asset.landit.com.au/brand/landit/fonts/OFL-poppins.txt">Poppins OFL</a> · <a href="https://asset.landit.com.au/brand/landit/fonts/OFL-montserrat.txt">Montserrat OFL</a></p>
+    </section>
+
+    <section>
+      <h2>Icons</h2>
+      <p class="muted">2 px line, 24 px grid. <code>&lt;name&gt;.svg</code> uses <code>currentColor</code>: inline it, or use it as a CSS mask, to recolour it on the web. In an <code>&lt;img&gt;</code> or email, use the fixed-colour SVG or PNG (96 px, transparent).</p>
+      <div class="icons">
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/bath-navy.svg" alt="" width="40" height="40"><figcaption><code>bath</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/bath.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/bath-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/bath-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/bath-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/bath-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/bath-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/bath-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/bed-navy.svg" alt="" width="40" height="40"><figcaption><code>bed</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/bed.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/bed-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/bed-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/bed-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/bed-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/bed-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/bed-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/car-navy.svg" alt="" width="40" height="40"><figcaption><code>car</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/car.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/car-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/car-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/car-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/car-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/car-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/car-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/garage-navy.svg" alt="" width="40" height="40"><figcaption><code>garage</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/garage.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/garage-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/garage-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/garage-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/garage-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/garage-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/garage-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/globe-navy.svg" alt="" width="40" height="40"><figcaption><code>globe</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/globe.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/globe-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/globe-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/globe-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/globe-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/globe-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/globe-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/handshake-navy.svg" alt="" width="40" height="40"><figcaption><code>handshake</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/handshake.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/handshake-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/handshake-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/handshake-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/handshake-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/handshake-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/handshake-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/location-navy.svg" alt="" width="40" height="40"><figcaption><code>location</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/location.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/location-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/location-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/location-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/location-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/location-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/location-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/mail-navy.svg" alt="" width="40" height="40"><figcaption><code>mail</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/mail.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/mail-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/mail-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/mail-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/mail-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/mail-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/mail-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/map-pin-navy.svg" alt="" width="40" height="40"><figcaption><code>map-pin</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/map-pin.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/map-pin-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/map-pin-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/map-pin-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/map-pin-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/map-pin-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/map-pin-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/megaphone-navy.svg" alt="" width="40" height="40"><figcaption><code>megaphone</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/megaphone.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/megaphone-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/megaphone-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/megaphone-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/megaphone-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/megaphone-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/megaphone-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/phone-navy.svg" alt="" width="40" height="40"><figcaption><code>phone</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/phone.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/phone-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/phone-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/phone-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/phone-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/phone-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/phone-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/settings-navy.svg" alt="" width="40" height="40"><figcaption><code>settings</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/settings.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/settings-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/settings-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/settings-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/settings-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/settings-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/settings-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/shield-check-navy.svg" alt="" width="40" height="40"><figcaption><code>shield-check</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/shield-check.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/shield-check-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/shield-check-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/shield-check-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/shield-check-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/shield-check-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/shield-check-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/shower-navy.svg" alt="" width="40" height="40"><figcaption><code>shower</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/shower.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/shower-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/shower-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/shower-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/shower-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/shower-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/shower-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/toilet-paper-navy.svg" alt="" width="40" height="40"><figcaption><code>toilet-paper</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/toilet-paper.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/toilet-paper-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/toilet-paper-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/toilet-paper-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/toilet-paper-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/toilet-paper-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/toilet-paper-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/toilet-navy.svg" alt="" width="40" height="40"><figcaption><code>toilet</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/toilet.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/toilet-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/toilet-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/toilet-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/toilet-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/toilet-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/toilet-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/user-navy.svg" alt="" width="40" height="40"><figcaption><code>user</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/user.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/user-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/user-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/user-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/user-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/user-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/user-white.png">white</a></span></figcaption></figure>
+      <figure class="icon"><img src="https://asset.landit.com.au/brand/landit/icons/svg/wardrobe-navy.svg" alt="" width="40" height="40"><figcaption><code>wardrobe</code><span>SVG <a href="https://asset.landit.com.au/brand/landit/icons/svg/wardrobe.svg">currentColor</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/wardrobe-navy.svg">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/wardrobe-red.svg">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/svg/wardrobe-white.svg">white</a></span><span>PNG <a href="https://asset.landit.com.au/brand/landit/icons/png/wardrobe-navy.png">navy</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/wardrobe-red.png">red</a> <a href="https://asset.landit.com.au/brand/landit/icons/png/wardrobe-white.png">white</a></span></figcaption></figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>Favicon, social and templates</h2>
+      <div class="grid">
+        <div><h3>Favicon</h3><ul class="links">
+          <li><a href="https://asset.landit.com.au/brand/landit/favicon/favicon.svg">favicon.svg</a> · <a href="https://asset.landit.com.au/brand/landit/favicon/favicon.ico">favicon.ico</a></li>
+          <li><a href="https://asset.landit.com.au/brand/landit/favicon/favicon-96x96.png">favicon-96x96.png</a></li>
+          <li><a href="https://asset.landit.com.au/brand/landit/favicon/apple-touch-icon.png">apple-touch-icon.png</a></li>
+          <li><a href="https://asset.landit.com.au/brand/landit/favicon/web-app-manifest-192x192.png">192</a> · <a href="https://asset.landit.com.au/brand/landit/favicon/web-app-manifest-512x512.png">512</a> manifest icons</li></ul></div>
+        <div><h3>Social (white / navy / red)</h3><ul class="links">
+          <li>Facebook cover <a href="https://asset.landit.com.au/brand/landit/social/facebook-cover-white.jpg">white</a> <a href="https://asset.landit.com.au/brand/landit/social/facebook-cover-navy.jpg">navy</a> <a href="https://asset.landit.com.au/brand/landit/social/facebook-cover-red.jpg">red</a></li>
+          <li>LinkedIn banner <a href="https://asset.landit.com.au/brand/landit/social/linkedin-banner-white.jpg">white</a> <a href="https://asset.landit.com.au/brand/landit/social/linkedin-banner-navy.jpg">navy</a> <a href="https://asset.landit.com.au/brand/landit/social/linkedin-banner-red.jpg">red</a></li>
+          <li>X header <a href="https://asset.landit.com.au/brand/landit/social/x-header-white.jpg">white</a> <a href="https://asset.landit.com.au/brand/landit/social/x-header-navy.jpg">navy</a> <a href="https://asset.landit.com.au/brand/landit/social/x-header-red.jpg">red</a></li>
+          <li>YouTube banner <a href="https://asset.landit.com.au/brand/landit/social/youtube-banner-white.jpg">white</a> <a href="https://asset.landit.com.au/brand/landit/social/youtube-banner-navy.jpg">navy</a> <a href="https://asset.landit.com.au/brand/landit/social/youtube-banner-red.jpg">red</a></li>
+          <li>Instagram story <a href="https://asset.landit.com.au/brand/landit/social/instagram-story-white.jpg">white</a> <a href="https://asset.landit.com.au/brand/landit/social/instagram-story-navy.jpg">navy</a> <a href="https://asset.landit.com.au/brand/landit/social/instagram-story-red.jpg">red</a></li>
+          <li>Profile picture <a href="https://asset.landit.com.au/brand/landit/social/profile-picture-white.jpg">white</a> <a href="https://asset.landit.com.au/brand/landit/social/profile-picture-navy.jpg">navy</a> <a href="https://asset.landit.com.au/brand/landit/social/profile-picture-red.jpg">red</a></li></ul></div>
+        <div><h3>Documents</h3><ul class="links">
+          <li><a href="https://asset.landit.com.au/brand/landit/guideline/landit-brand-guideline.pdf">Brand guideline (PDF)</a></li>
+          <li><a href="https://asset.landit.com.au/brand/landit/templates/landit-deck-template.pptx">Deck template (PPTX)</a></li></ul></div>
+      </div>
+    </section>
+
+    <section>
+      <p class="muted"><a href="https://asset.landit.com.au/">All brands and assets</a> · <a href="https://landit.com.au/">landit.com.au</a></p>
+    </section>
+  </main>
+</body>
+</html>

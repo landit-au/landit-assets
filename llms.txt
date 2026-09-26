@@ -1,0 +1,27 @@
+# LANDIT Assets
+
+> Public, permanent-URL host for LANDIT brand assets (logos, icons, fonts, colour tokens, templates) and email-signature files. LANDIT is a Sydney real-estate business (House · Land · Investment). Every file here is served verbatim at https://asset.landit.com.au/<repo path>; URLs never change.
+
+When building anything on-brand (web app, landing page, EDM, deck, print), read the brand guide first and use the published asset URLs rather than recreating logos or icons. Human-browsable version: https://asset.landit.com.au/
+
+## LANDIT brand
+
+- [Brand guide for agents](https://asset.landit.com.au/brand/landit/AGENTS.md): colours, logo usage, typography, icons, voice, which file format to use per medium, and the full asset map
+- [Brand page](https://asset.landit.com.au/brand/landit/): swatches, logo downloads and the icon grid, for humans
+- [tokens.css](https://asset.landit.com.au/brand/landit/tokens.css): CSS custom properties (colours, fonts, semantic roles)
+- [tokens.json](https://asset.landit.com.au/brand/landit/tokens.json): the same tokens in W3C design-tokens format
+- [fonts.css](https://asset.landit.com.au/brand/landit/fonts/fonts.css): self-hosted Poppins (headings) and Montserrat (body) WOFF2
+- [Primary logo (SVG)](https://asset.landit.com.au/brand/landit/logo/landit-logo-color.svg): red mark + navy wordmark, for light backgrounds; other variants are in the brand guide
+- [Icon: bed (SVG)](https://asset.landit.com.au/brand/landit/icons/svg/bed.svg): example icon; all 18 icon names and colour variants are listed in the brand guide
+- [Favicon (SVG)](https://asset.landit.com.au/brand/landit/favicon/favicon.svg): the favicon and app-icon set lives in /brand/landit/favicon/
+- [Brand guideline PDF](https://asset.landit.com.au/brand/landit/guideline/landit-brand-guideline.pdf): the designer's guideline, the authoritative source for the rules in the brand guide
+
+## Email signatures
+
+- [LANDIT signature template](https://asset.landit.com.au/email/generic/signature.html): copy-paste HTML signature (table layout, inline styles)
+- [Realtisan signature](https://asset.landit.com.au/email/realtisan/jack.html): signature for the Realtisan brand
+
+## Optional
+
+- [Deck template (PPTX)](https://asset.landit.com.au/brand/landit/templates/landit-deck-template.pptx): branded PowerPoint template
+- [Repository](https://github.com/landit-au/landit-assets): source repo; the root AGENTS.md explains conventions for contributing

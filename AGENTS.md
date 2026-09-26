@@ -35,7 +35,7 @@ Same trunk-based flow as `landit-digital`:
 - **Branch + PR only** — nobody commits directly to `main`, including agent sessions.
 - Branch names: lowercase, hyphenated, ticket key first (`road-xxx-short-description`); no ticket → `chore-short-description`.
 - Commit messages: `ROAD-XXX: Short description` or `chore: Short description`.
-- No CI runs here, so draft PRs are optional. Merge via rebase, then spot-check the asset URL over HTTPS.
+- No CI runs here, so draft PRs are optional. Repo settings restrict merging to **rebase only** (squash and merge-commit disabled, same as `landit-digital`) — `gh pr merge --rebase`, then spot-check the asset URL over HTTPS.
 
 ## Conventions
 

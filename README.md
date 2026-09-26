@@ -17,11 +17,11 @@ GitHub Pages serves the `main` branch root directly — no build step. Merging t
 - `CNAME` pins the `asset.landit.com.au` custom domain.
 - `.nojekyll` keeps Pages serving files verbatim (no Jekyll processing, so dotfiles and `_`-prefixed paths deploy).
 - `index.html` is the human index of every brand and asset area. `llms.txt` is the agent index, covering brand assets only: email signatures are deliberately excluded because they contain personal contact details.
-- `robots.txt` keeps HTML pages unindexed while allowing image files to be crawled, and blocks AI crawlers from `/email/` entirely.
+- `robots.txt` keeps HTML pages unindexed while allowing image files to be crawled, and blocks AI crawlers from `/email/` entirely. Only the LANDIT brand is open to search; other brands and the repo docs are closed.
 
 ## Repository structure
 
-- `brand/landit/` — LANDIT brand: `logo/`, `icons/`, `fonts/`, `favicon/`, `social/`, `templates/`, `guideline/`, `tokens.css`/`tokens.json`, a browsable `index.html` and the agent-readable `AGENTS.md`. Other brands get sibling folders (`brand/<brand>/`).
+- `brand/landit/` — LANDIT brand: `logo/`, `icons/`, `fonts/`, `favicon/`, `social/`, `templates/`, `guideline/`, `tokens.css`/`tokens.json`, a browsable `index.html` and the agent-readable `AGENTS.md`. Other brands get sibling folders (`brand/<brand>/`). These are unlisted: kept out of `llms.txt` and search, and linked only from the human index.
 - `email/` — email-signature HTML templates + images (`email/realtisan/` for Realtisan-brand signatures). `email/index.html` is the human-only list of signatures.
 
 Example:

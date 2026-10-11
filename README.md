@@ -1,62 +1,21 @@
 # landit-assets
 
-Static asset host for LANDIT — brand assets (logos, icons, fonts, colour tokens, templates) and email-signature files. Served publicly at **https://asset.landit.com.au/**.
+Dumb static file host for LANDIT's public assets, served by GitHub Pages at **https://asset.landit.com.au/**. A repo path is the public URL path: `email/jack.png` → `https://asset.landit.com.au/email/jack.png`. No CI, no build step — merging to `main` redeploys within a minute.
 
-- **Humans:** start at https://asset.landit.com.au/ (index of every brand and asset area).
-- **AI agents:** start at https://asset.landit.com.au/llms.txt, or point them at the brand guide https://asset.landit.com.au/brand/landit/AGENTS.md.
+- **Humans:** https://asset.landit.com.au/ · **AI agents:** https://asset.landit.com.au/llms.txt
+- **Guidelines and templates are private:** the brand guide and email-signature templates live in [landit-brain](https://github.com/landit-au/landit-brain) (`knowledge/guidelines/brand.md`, `assets/`).
 
-## Purpose
+## The one rule: published URLs are immutable
 
-- Host static assets whose public URL must stay stable forever (a sent email signature can never be updated).
-- Keep asset management simple: files in the repo map 1:1 to public URLs.
+Sent email signatures hotlink the portraits; EDM templates hotlink the logo PNGs. Those URLs can never be updated — **never rename, move, or delete a published path.** Adding files is always safe; when in doubt, publish a new path rather than overwrite.
 
-## Deployment
+## Layout
 
-GitHub Pages serves the `main` branch root directly — no build step. Merging to `main` redeploys automatically, usually within a minute.
+- `brand/landit/` — logos, icons, fonts, favicons, social banners, `tokens.css`/`tokens.json`, guideline PDF, deck template, browsable `index.html`
+- `email/` — signature portraits only
+- `index.html` / `llms.txt` — the human and agent indexes
+- `robots.txt` — `*.html` pages closed to crawlers, images open; `/email/` fully closed to AI crawlers
 
-- `CNAME` pins the `asset.landit.com.au` custom domain.
-- `.nojekyll` keeps Pages serving files verbatim (no Jekyll processing, so dotfiles and `_`-prefixed paths deploy).
-- `index.html` is the human index of every brand and asset area. `llms.txt` is the agent index for every brand. It's closed to search engines because it names non-LANDIT brands. Email signatures are deliberately excluded from it because they contain personal contact details.
-- `robots.txt` keeps HTML pages unindexed and LANDIT brand files crawlable, and closes signature pages to every crawler and AI agent (images stay fetchable so mail clients render them). Only the LANDIT brand is open to search; other brands, `llms.txt` and the repo docs are closed to search but open to agents a person points at the site.
+## Adding an asset
 
-## Repository structure
-
-- `brand/landit/` — LANDIT brand: `logo/`, `icons/`, `fonts/`, `favicon/`, `social/`, `templates/`, `guideline/`, `tokens.css`/`tokens.json`, a browsable `index.html` and the agent-readable `AGENTS.md`. Other brands get sibling folders (`brand/<brand>/`). These are hidden from search but listed in `llms.txt` and the human index, so people and agents can still use them.
-- `email/` — email-signature HTML templates + images (`email/realtisan/` for Realtisan-brand signatures). `email/index.html` is the human-only list of signatures.
-
-Example:
-
-- `email/jack.png` → `https://asset.landit.com.au/email/jack.png`
-- `brand/landit/logo/landit-logo-color.svg` → `https://asset.landit.com.au/brand/landit/logo/landit-logo-color.svg`
-
-## Usage
-
-Reference assets by absolute URL — the repo path becomes the URL path:
-
-```html
-<img src="https://asset.landit.com.au/email/jack.png" alt="Jack" />
-```
-
-## File naming and path rules
-
-- **Never rename, move, or delete a published asset** — its URL is embedded in places that can't be updated (sent emails, third-party sites).
-- Keep names lowercase and hyphenated, no spaces — the filename becomes a permanent public URL.
-- New asset categories get their own top-level folder (e.g. `brand/`); new brands inside a category get a subfolder.
-- If you add an asset, place it in the correct folder and use a clear, stable filename.
-
-## Adding or updating assets
-
-Work happens on a branch, merged via PR (see `AGENTS.md` for the conventions agents follow):
-
-```bash
-git checkout -b chore-add-email-signature
-git add email/new-image.png
-git commit -m "chore: Add email signature asset email/new-image.png"
-```
-
-Every change that adds a file must also update the relevant indexes in the same PR: the brand `AGENTS.md` and `index.html` for brand files, plus `llms.txt` and the root `index.html` for new brands or areas. A new signature goes on `email/index.html` only, **never** `llms.txt`. See the link-integrity rule in `AGENTS.md`. After merging, verify the asset loads at `https://asset.landit.com.au/<path>` before referencing it.
-
-## Notes
-
-- This repo is for static assets only, not source code, and is **public by design** — never commit secrets or unreleased material.
-- Broken images in email signatures almost always mean the filename or path changed.
+Filenames lowercase, hyphenated, no spaces — the name becomes a permanent URL. Branch + PR only (conventions in `AGENTS.md`); update `llms.txt` and `index.html` for new areas in the same PR. This repo is public by design — never commit anything private.

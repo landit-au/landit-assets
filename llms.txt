@@ -1,26 +1,25 @@
 # LANDIT Assets
 
-> Permanent-URL host for LANDIT brand assets (logos, icons, fonts, colour tokens, templates) and those of related brands. LANDIT is a Sydney real-estate business (House · Land · Investment). Every file here is served verbatim at https://asset.landit.com.au/<repo path>; URLs never change.
+> Permanent-URL host for public LANDIT brand assets (logos, icons, fonts, colour tokens, templates) and those of related brands. LANDIT is a Sydney real-estate business (House · Land · Investment). Every file here is served verbatim at https://asset.landit.com.au/<repo path>; URLs never change.
 
-When building anything on-brand (web app, landing page, EDM, deck, print), read the brand guide first and use the published asset URLs rather than recreating logos or icons. Human-browsable version: https://asset.landit.com.au/
+When building anything on-brand (web app, landing page, EDM, deck, print), use the published asset URLs rather than recreating logos or icons. The source-of-truth brand guidelines and signature templates live in the private landit-brain repo. Human-browsable version: https://asset.landit.com.au/
 
 ## LANDIT brand
 
-- [Brand guide for agents](https://asset.landit.com.au/brand/landit/AGENTS.md): colours, logo usage, typography, icons, voice, which file format to use per medium, and the full asset map
-- [Brand page](https://asset.landit.com.au/brand/landit/): swatches, logo downloads and the icon grid, for humans
+- [Brand page](https://asset.landit.com.au/brand/landit/): swatches, logo downloads and the icon grid
 - [tokens.css](https://asset.landit.com.au/brand/landit/tokens.css): CSS custom properties (colours, fonts, semantic roles)
 - [tokens.json](https://asset.landit.com.au/brand/landit/tokens.json): the same tokens in W3C design-tokens format
 - [fonts.css](https://asset.landit.com.au/brand/landit/fonts/fonts.css): self-hosted WOFF2 for the five brand weights: Poppins 500/700 (headings) and Montserrat 400/500/600 (body)
-- [Primary logo (SVG)](https://asset.landit.com.au/brand/landit/logo/landit-logo-color.svg): red mark + navy wordmark, for light backgrounds; other variants are in the brand guide
-- [Icon: bed (SVG)](https://asset.landit.com.au/brand/landit/icons/svg/bed.svg): example icon; all 18 icon names and colour variants are listed in the brand guide
+- [Primary logo (SVG)](https://asset.landit.com.au/brand/landit/logo/landit-logo-color.svg): red mark + navy wordmark, for light backgrounds; other variants are on the brand page
+- [Icon: bed (SVG)](https://asset.landit.com.au/brand/landit/icons/svg/bed.svg): example icon; the full set is browsable on the brand page
 - [Favicon (SVG)](https://asset.landit.com.au/brand/landit/favicon/favicon.svg): the favicon and app-icon set lives in /brand/landit/favicon/
-- [Brand guideline PDF](https://asset.landit.com.au/brand/landit/guideline/landit-brand-guideline.pdf): the designer's guideline, the authoritative source for the rules in the brand guide
+- [Brand guideline PDF](https://asset.landit.com.au/brand/landit/guideline/landit-brand-guideline.pdf): the designer's guideline, the authoritative source for the brand rules
 
 ## Other brands
 
-Related brands use the same layout as LANDIT at https://asset.landit.com.au/brand/<brand>/ (AGENTS.md brand guide, index.html, logo/, icons/, fonts/, tokens.css). Each one is listed here once published. They're kept out of search engines but are meant for agents, so use them when asked to work in that brand.
+Related brands use the same layout as LANDIT at https://asset.landit.com.au/brand/<brand>/ (index.html, logo/, icons/, fonts/, tokens.css). Each one is listed here once published. They're kept out of search engines but are meant for agents, so use them when asked to work in that brand.
 
 ## Optional
 
 - [Deck template (PPTX)](https://asset.landit.com.au/brand/landit/templates/landit-deck-template.pptx): branded PowerPoint template
-- [Repository](https://github.com/landit-au/landit-assets): source repo; the root AGENTS.md explains conventions for contributing
+- [Repository](https://github.com/landit-au/landit-assets): source repo; brand guidelines and signature templates live in the private landit-brain repo

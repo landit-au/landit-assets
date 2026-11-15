@@ -1,0 +1,19 @@
+# One line ending for the whole repo: LF, on every platform.
+# Git for Windows defaults to core.autocrlf=true, which stores LF but checks files out
+# as CRLF; this keeps working copies LF too, so scripts, linters and agents on every
+# machine see the same bytes.
+* text=auto eol=lf
+
+# Binary files: never touch.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.pdf binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.zip binary
